@@ -10,13 +10,10 @@ import { ComposeMessageView } from './views/ComposeMessageView'
 
 export function AppRouter() {
     return (
-        <BrowserRouter>
+        <>
             <NavBar />
-            <Switch>
-                <Route path="/inbox" component={InboxView} />
-                <Route path="/" render={() => <Redirect to="/inbox" />} />
-            </Switch>
+            <InboxView />
             <ComposeMessageView />
-        </BrowserRouter>
+        </>
     )
 }
